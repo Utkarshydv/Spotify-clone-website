@@ -1,0 +1,603 @@
+body {
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #000;
+  padding: 10px 6px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-right: 1px solid #000;
+  position: fixed;
+  height: 100vh;
+}
+
+.nav-card {
+  background-color: #000000;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 8px; /* ✅ Align with main content */
+  margin-top:13.5px
+}
+
+.nav-button {
+  background: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #000000;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.library-card {
+  background: linear-gradient(to bottom, #0a0a0a, #000000);
+  padding: 5px 5px;
+  border-radius: 10px;
+  flex: 1;
+  overflow: hidden;
+  margin-left: 8px; /* ✅ Align with main content */
+ 
+  height: 280px; /* or whatever height works well in your layout */
+  overflow-y: auto;
+  padding-right: 4px; /* space for scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #555 #000000;
+
+}
+
+.library-card h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.library-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.library-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #101010;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.library-card li img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.library-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.library-card::-webkit-scrollbar-track {
+  background: #121212;
+  border-radius: 100px;
+}
+
+.library-card::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 100px;
+}
+
+
+.main-content {
+  margin-left: 250px;
+  padding: 24px 32px 100px 32px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #000000;
+}
+
+/* Unified wrapper for Goodnight + Made for you */
+.highlight-section {
+  background: linear-gradient(to bottom, #001000 0%, #000000 50%);
+  margin: 0 8px 20px 8px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.top-header {
+  padding: 24px;
+  border-radius: 12px 12px 0 0;
+  margin: 0;
+}
+
+.quick-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.quick-card {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 3px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quick-card:hover {
+  background-color: #3a3a3a;
+}
+
+.quick-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.recommendations {
+  padding: 0 24px 24px 24px;
+}
+
+.recommendations h2 {
+  margin: 24px 0 16px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: #181818;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.card:hover {
+  background-color: #282828;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.player-bar {
+  background-color: #000000;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  position: fixed;
+  bottom: 0;
+  left: 266px;
+  right: 0;
+  border-top: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.player-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-left img {
+  width: 70px;
+  height: 70px;
+  border-radius: 1px;
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.search-input {
+  background-color: #000;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 15px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.player-bar {
+  background-color: #000000;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  position: fixed;
+  bottom: 0;
+  left: 266px;
+  right: 0;
+  border-top: 1px solid #333;
+  box-sizing: border-box;
+  height: 100px; /* taller to fit seek bar */
+}
+
+.player-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-left img {
+  width: 70px;
+  height: 70px;
+  border-radius: 1px;
+}
+
+.player-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+}
+
+.seek-bar {
+  width: 60%;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: white;
+  outline: none;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+.seek-bar::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.player-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 60px;
+}
+
+.volume-icon {
+  font-size: 20px;
+  color: white;
+}
+
+#youtube-player-container {
+  background: linear-gradient(to bottom, #181818, #000000);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  padding: 20px;
+  max-width: 80%;
+}
+
+#youtube-player {
+  border: none;
+  width: 100%;
+  height: 350px;
+  display: block;
+  border-radius: 8px;
+}
+
+#lyrics-container {
+  background: #000000;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  max-height: 300px;
+  overflow-y: auto;
+  color: #cacaca;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.lyrics-box pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.library-card li:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+/* Container fade + slide transition */
+.lyrics-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Shown state when JS adds the class */
+.lyrics-transition.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lyrics styling */
+#lyrics-container {
+  background: linear-gradient(to bottom, #181818, #000000);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  max-height: 300px;
+  max-width: 80%;
+  overflow-y: auto;
+  color: #999999;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  backdrop-filter: blur(6px);
+}
+
+.lyrics-box pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* === Track Slider (Seek Bar) === */
+.seek-bar {
+  width: 80%;
+  height: 5px;
+  background: #fff;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.seek-bar:hover {
+  background: #e0e0e0;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 20px;
+  background: #012500;
+  border-radius: 100%;
+  box-shadow: 0 0 6px #929292;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.seek-bar::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* === Volume Slider === */
+#volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 10px;
+  background: #727272;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 28px;
+  bottom: 60px;
+  transform: rotate(90deg);
+  z-index: 20;
+  transition: background 0.3s ease;
+}
+
+#volume-slider:hover {
+  background: #c5c5c5;
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 15px;
+  background: #093f1c;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #1db954;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+.library-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.library-card::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+.library-card::-webkit-scrollbar-thumb {
+  background-color: #101010;
+  border-radius: 10px;
+}
+
+/* === MOBILE RESPONSIVE FIX === */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px;
+    justify-content: space-between;
+    border-right: none;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-card, .library-card {
+    margin-left: 0;
+    margin-top: 0;
+    width: 48%;
+    height: auto;
+    flex: 1;
+  }
+
+  .library-card ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .library-card li {
+    min-width: 160px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .library-card li img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .player-bar {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 10px;
+    gap: 12px;
+    left: 0;
+  }
+
+  .player-left {
+    justify-content: center;
+  }
+
+  .player-center {
+    width: 100%;
+    align-items: center;
+  }
+
+  .seek-bar {
+    width: 100%;
+  }
+
+  .player-right {
+    justify-content: center;
+  }
+
+  #youtube-player, #youtube-player-container {
+    width: 100%;
+    height: auto;
+  }
+
+  #lyrics-container {
+    max-width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  .quick-cards {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

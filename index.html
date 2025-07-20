@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Clone Music App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="card nav-card">
+        <button id="homeBtn" class="nav-button"><span class="icon">⌂</span>Home</button>
+
+        <input type="text" class="search-input" placeholder="Search" />
+      </div>
+      <div class="card library-card">
+        <h2>Your Library</h2>
+        <ul>
+          <li data-index="0"><img src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png"/><div><strong>Starboy</strong><br/><span>Weeknd</span></div></li>
+          <li data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/7/72/Stoneyalbum.jpg"/><div><strong>Congratulations</strong><br/><span>Post Malone</span></div></li>
+          <li data-index="2"><img src="https://upload.wikimedia.org/wikipedia/en/0/02/Wrld_on_Drugs.jpg"/><div><strong>Fine China</strong><br/><span>Juice Wrld</span></div></li>
+          <li data-index="3"><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Drake_-_More_Life_cover.jpg"/><div><strong>Passionfruit</strong><br/><span>Drake</span></div></li>
+          <li data-index="0"><img src="https://static.wikia.nocookie.net/postmalone/images/9/9e/Spider-Man_Into_the_Spider-Verse_Soundtrack_Cover.jpg"/><div><strong>Sunflower</strong><br/><span>Post Malone</span></div></li>
+          <li data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/a/af/Drake_-_Views_cover.jpg"/><div><strong>One Dance</strong><br/><span>Drake</span></div></li>
+          <li data-index="0"><img src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png"/><div><strong>Starboy</strong><br/><span>Weeknd</span></div></li>
+          <li data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/7/72/Stoneyalbum.jpg"/><div><strong>Congratulations</strong><br/><span>Post Malone</span></div></li>
+          <li data-index="2"><img src="https://upload.wikimedia.org/wikipedia/en/0/02/Wrld_on_Drugs.jpg"/><div><strong>Fine China</strong><br/><span>Juice Wrld</span></div></li>
+          <li data-index="3"><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Drake_-_More_Life_cover.jpg"/><div><strong>Passionfruit</strong><br/><span>Drake</span></div></li>
+          <li data-index="0"><img src="https://static.wikia.nocookie.net/postmalone/images/9/9e/Spider-Man_Into_the_Spider-Verse_Soundtrack_Cover.jpg"/><div><strong>Sunflower</strong><br/><span>Post Malone</span></div></li>
+          <li data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/a/af/Drake_-_Views_cover.jpg"/><div><strong>One Dance</strong><br/><span>Drake</span></div></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="highlight-section">
+        <header class="top-header">
+          <h1>Home</h1>
+          <h2>Lyrics</h2>
+          <div class="quick-cards">
+            <div class="quick-card" data-index="0"><img src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png"/>Weeknd</div>
+            <div class="quick-card" data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/7/72/Stoneyalbum.jpg"/>Post Malone</div>
+            <div class="quick-card" data-index="2"><img src="https://upload.wikimedia.org/wikipedia/en/0/02/Wrld_on_Drugs.jpg"/>Juice Wrld</div>
+            <div class="quick-card" data-index="3"><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Drake_-_More_Life_cover.jpg"/>Drake</div>
+            <div class="quick-card" data-index="2"><img src="https://upload.wikimedia.org/wikipedia/en/0/02/Wrld_on_Drugs.jpg"/>Juice Wrld</div>            
+            <div class="quick-card" data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/a/af/Drake_-_Views_cover.jpg"/>Drake</div>
+            <div class="quick-card" data-index="0"><img src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png"/>Weeknd</div>
+            <div class="quick-card" data-index="0"><img src="https://static.wikia.nocookie.net/postmalone/images/9/9e/Spider-Man_Into_the_Spider-Verse_Soundtrack_Cover.jpg"/>Post Malone</div>
+          </div>
+        </header>
+
+        <section class="recommendations">
+          <h2>Videos</h2>
+          <div class="grid">
+            <div class="card" data-index="0"><img src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png"/><strong>Starboy</strong><p>Weeknd</p></div>
+            <div class="card" data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/7/72/Stoneyalbum.jpg"/><strong>Congratulations</strong><p>Post Malone</p></div>
+            <div class="card" data-index="2"><img src="https://upload.wikimedia.org/wikipedia/en/0/02/Wrld_on_Drugs.jpg"/><strong>Fine China</strong><p>Juice Wrld</p></div>
+            <div class="card" data-index="3"><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Drake_-_More_Life_cover.jpg"/><strong>Passionfruit</strong><p>Drake</p></div>
+            <div class="card" data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/a/af/Drake_-_Views_cover.jpg"/><strong>One Dance</strong><p>Drake</p></div>
+            <div class="card" data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/7/72/Stoneyalbum.jpg"/><strong>Congratulations</strong><p>Post Malone</p></div>
+            
+            <div class="card" data-index="3"><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Drake_-_More_Life_cover.jpg"/><strong>Passionfruit</strong><p>Drake</p></div>
+            <div class="card" data-index="0"><img src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png"/><strong>Starboy</strong><p>Weeknd</p></div>
+            <div class="card" data-index="1"><img src="https://upload.wikimedia.org/wikipedia/en/a/af/Drake_-_Views_cover.jpg"/><strong>One Dance</strong><p>Drake</p></div>
+            <div class="card" data-index="0"><img src="https://static.wikia.nocookie.net/postmalone/images/9/9e/Spider-Man_Into_the_Spider-Verse_Soundtrack_Cover.jpg"/><strong>Sunflower</strong><p>Post Malone</p></div>
+          </div>
+          
+          <!-- YouTube Player Container (Initially hidden) -->
+         <!-- YouTube Player Container -->
+<div id="youtube-player-container" style="display: none; margin-top: 50px;">
+  <iframe id="youtube-player" width="100%" height="315" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+</div>
+
+<!-- Lyrics Container -->
+<div id="lyrics-container" class="lyrics-transition" style="display: none; margin-top: 50px;">
+  <div class="lyrics-box">
+    <pre id="lyrics-text"></pre>
+  </div>
+</div>
+
+        
+        </section>
+      </div>
+    </main>
+
+    <!-- Music Player -->
+    <footer class="player-bar">
+  <div class="player-left">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png" />
+    <div><strong>Starboy</strong><br/><span>Weeknd</span></div>
+  </div>
+
+  <div class="player-center">
+    <input type="range" class="seek-bar" min="0" max="100" value="0" />
+    <div class="player-controls">
+      <button id="prevBtn">◀◀</button>
+      <button id="playPauseBtn">❚❚</button>
+      <button id="nextBtn">▶▶</button>
+    </div>
+  </div>
+
+  <div class="player-right">
+    <span class="volume-icon">ᯤ</span>
+  </div>
+
+
+
+<!-- Volume slider (shown on click) -->
+<input type="range" id="volume-slider" min="0" max="1" step="0.01"
+  style="display: none; position: absolute; right: 20px; bottom: 60px; width: 100px; z-index: 10;" />
+<audio id="audio" src=""></audio>
+
+</footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
