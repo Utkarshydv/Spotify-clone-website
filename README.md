@@ -1,6 +1,6 @@
 # Spotify Clone Web Music Player
 
-This is a responsive and visually accurate clone of Spotify's interface built with HTML, CSS, and JavaScript. It features a fully functional music player with playlist support, real-time lyrics display, YouTube video playback, seek & volume sliders, and dynamic UI transitions. Designed to simulate a real music streaming experience while staying lightweight and static, perfect for GitHub Pages hosting.
+This is a responsive and visually accurate clone of Spotify's interface built with HTML, CSS, and JavaScript. It features a fully functional music player with playlist support, real-time lyrics display, YouTube video playback, seek & volume sliders, and dynamic UI transitions. Designed to simulate a real music streaming experience while staying lightweight and static, perfect for GitHub Pages hosting.Live at https://utkarshydv.github.io/spotify-clone-website/
 
 
 ##  Features
