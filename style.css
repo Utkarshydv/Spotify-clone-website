@@ -130,7 +130,7 @@ body {
 
 /* Unified wrapper for Goodnight + Made for you */
 .highlight-section {
-  background: linear-gradient(to bottom, #001000 0%, #000000 50%);
+  background: linear-gradient(to bottom, #002000 0%, #000000 50%);
   margin: 0 8px 20px 8px;
   border-radius: 12px;
   overflow: hidden;
@@ -309,8 +309,8 @@ body {
 
 .seek-bar::-webkit-slider-thumb {
   appearance: none;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: white;
   border-radius: 50%;
   cursor: pointer;
@@ -318,8 +318,8 @@ body {
 }
 
 .seek-bar::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: white;
   border: none;
   border-radius: 50%;
