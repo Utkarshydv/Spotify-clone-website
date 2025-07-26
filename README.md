@@ -20,3 +20,7 @@ This is a responsive and visually accurate clone of Spotify's interface built wi
 ---
 <img width="1460" height="869" alt="Screenshot 2025-07-21 at 2 15 44 AM" src="https://github.com/user-attachments/assets/bd62bf67-b01e-4ffb-ac5e-989f1c4c5995" />
 by Utkarsh
+
+## License
+
+[MIT](LICENSE)
